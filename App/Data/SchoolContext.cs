@@ -28,13 +28,13 @@ namespace App {
             });
 
             modelBuilder.Entity<Grade>().HasData(new Grade[] { 
-            new Grade { Id = 1, StudentId = 1, CourseName= "Spanish", GradeP = 0.20F },
-            new Grade { Id = 2, StudentId = 2, CourseName = "Geometry", GradeP = 0.90F },
-            new Grade { Id = 3, StudentId = 3, CourseName= "Mathematics", GradeP = 0.25F },
-            new Grade {Id = 4, StudentId = 1, CourseName= "Mathematics", GradeP = 0.75F },
-            new Grade {Id = 5, StudentId = 2, CourseName= "Mathematics", GradeP = 0.85F },
-            new Grade {Id = 6, StudentId = 3, CourseName= "Geometry", GradeP = 0.75F },
-            new Grade {Id = 7, StudentId = 2, CourseName= "Venting", GradeP = 0.55F },
+            new Grade { Id = 1, StudentId = 1, CourseName= "Spanish", GradeP = 20.0F },
+            new Grade { Id = 2, StudentId = 2, CourseName = "Geometry", GradeP = 90.0F },
+            new Grade { Id = 3, StudentId = 3, CourseName= "Mathematics", GradeP = 25.0F },
+            new Grade {Id = 4, StudentId = 1, CourseName= "Mathematics", GradeP = 75.0F },
+            new Grade {Id = 5, StudentId = 2, CourseName= "Mathematics", GradeP = 85.0F },
+            new Grade {Id = 6, StudentId = 3, CourseName= "Geometry", GradeP = 75.0F },
+            new Grade {Id = 7, StudentId = 2, CourseName= "Venting", GradeP = 55.0F },
             });
 
             base.OnModelCreating(modelBuilder);

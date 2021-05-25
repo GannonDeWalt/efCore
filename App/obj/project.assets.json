@@ -1115,11 +1115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lntinfotech\\galvanize\\dbSchool2\\efCore\\App\\App.csproj",
+      "projectUniqueName": "C:\\Users\\Lntinfotech\\Repos\\efCore\\App\\App.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\Lntinfotech\\galvanize\\dbSchool2\\efCore\\App\\App.csproj",
+      "projectPath": "C:\\Users\\Lntinfotech\\Repos\\efCore\\App\\App.csproj",
       "packagesPath": "C:\\Users\\Lntinfotech\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lntinfotech\\galvanize\\dbSchool2\\efCore\\App\\obj\\",
+      "outputPath": "C:\\Users\\Lntinfotech\\Repos\\efCore\\App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lntinfotech\\AppData\\Roaming\\NuGet\\NuGet.Config"
