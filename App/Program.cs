@@ -78,10 +78,14 @@ namespace App
             var freshmen = db.Students
             .Where(s => s.classification == Classification.Freshman)
             .Count();
-
-
             Console.WriteLine($"{freshmen} freshmen are in the database.");
             
+
+
+
+            Console.WriteLine("\nGetting the average of all Sophomores combined");
+            var sophmoreAvg = studentAllGrades.Where(student => student.Year == Classification.Sophomore).Average(o => o.Avg);
+            Console.WriteLine($"The average grade for all Sophmores is {sophmoreAvg}");
             
         }
 
