@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cNg3lg5hc8OgBwru2CZGoSQm8hDWmNBn6Dmx8G3/UZEBwNRJJyMeuZSppuofDUY7shsPmGHIvl76EyR5n4rPPg==",
+  "dgSpecHash": "34Ct4JBQDFnxKzkWGOsARaZryzLgjz1YK8ptMceg6LJDyY8XDbQWGNdrcSPe8PIng1ucMkCcc6hFfZ7isNMqZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lntinfotech\\Repos\\efCore\\App\\App.csproj",
+  "projectFilePath": "C:\\Users\\Lntinfotech\\galvanize\\dbSchool2\\efCore\\App\\App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lntinfotech\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lntinfotech\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

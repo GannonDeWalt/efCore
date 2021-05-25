@@ -4,10 +4,6 @@ using Microsoft.EntityFrameworkCore;
 namespace App {
     public class SchoolContext : DbContext
     {
-        // public DbSet<Customer> Customers { get; set; }
-        // public DbSet<Invoice> Invoices { get; set; }
-        // public DbSet<InvoiceItem> InvoiceItems { get; set; }
-
         public DbSet<Grade> Grades {get; set;}
         public DbSet<Student> Students {get; set;}
 
@@ -19,7 +15,6 @@ namespace App {
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.Entity<Student>().HasData(new Student[] {
             new Student { Id = 1, FirstName = "Pickle", LastName = "Rick", Age = 16, classification = Classification.Freshman},
             new Student { Id = 5, FirstName = "Minecraft", LastName = "Steve", Age = 12, classification = Classification.Freshman},
@@ -44,8 +39,6 @@ namespace App {
             });
 
             base.OnModelCreating(modelBuilder);
-        
-
         }
     }
 }

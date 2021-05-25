@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using Microsoft.EntityFrameworkCore.Internal;
 
 namespace App
 {
@@ -65,14 +64,15 @@ namespace App
 
             Console.WriteLine($"The max course count is {highCourseStudent.Count} from student {highCourseStudent.Name}");
 
+            //6 
             Console.WriteLine("\nDisplaying a student that is not in a class");
 
             var studentNOClass = db.Students
             .Include(student => student.grades).Where<Student>(s => s.grades.Count() == 0).FirstOrDefault();
-            Console.WriteLine($"{studentNOClass.FirstName} {studentNOClass.LastName} didn't register for a class uwu kinda sus.");
-            //.Where<Student>(s => s.grades == null).FirstOrDefault();
 
-            //6 Count the number of Freshmen
+            Console.WriteLine($"{studentNOClass.FirstName} {studentNOClass.LastName} didn't register for a class uwu kinda sus.");
+
+            //7 Count the number of Freshmen
             Console.WriteLine("\nGetting the number of freshman");
 
             var freshmen = db.Students
@@ -80,9 +80,7 @@ namespace App
             .Count();
             Console.WriteLine($"{freshmen} freshmen are in the database.");
             
-
-
-
+            //8
             Console.WriteLine("\nGetting the average of all Sophomores combined");
             var sophmoreAvg = studentAllGrades.Where(student => student.Year == Classification.Sophomore).Average(o => o.Avg);
             Console.WriteLine($"The average grade for all Sophmores is {sophmoreAvg}");
