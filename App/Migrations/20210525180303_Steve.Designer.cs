@@ -2,14 +2,16 @@
 using App;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace App.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    partial class SchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20210525180303_Steve")]
+    partial class Steve
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,29 +85,8 @@ namespace App.Migrations
                         {
                             Id = 7,
                             CourseName = "Venting",
-                            GradeP = 100f,
-                            StudentId = 6
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CourseName = "Geometry",
                             GradeP = 55f,
-                            StudentId = 6
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CourseName = "Venting",
-                            GradeP = 40f,
-                            StudentId = 7
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CourseName = "Mathematics",
-                            GradeP = 75f,
-                            StudentId = 7
+                            StudentId = 2
                         });
                 });
 
@@ -154,22 +135,6 @@ namespace App.Migrations
                             Age = 14,
                             FirstName = "Rick",
                             LastName = "Sanchez",
-                            classification = 1
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Age = 14,
-                            FirstName = "Harambe",
-                            LastName = "Gorilla",
-                            classification = 1
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Age = 14,
-                            FirstName = "Doug",
-                            LastName = "Dimmadome",
                             classification = 1
                         },
                         new

@@ -71,6 +71,19 @@ namespace App
             .Include(student => student.grades).Where<Student>(s => s.grades.Count() == 0).FirstOrDefault();
             Console.WriteLine($"{studentNOClass.FirstName} {studentNOClass.LastName} didn't register for a class uwu kinda sus.");
             //.Where<Student>(s => s.grades == null).FirstOrDefault();
+
+            //6 Count the number of Freshmen
+            Console.WriteLine("\nGetting the number of freshman");
+
+            var freshmen = db.Students
+            .Where(s => s.classification == Classification.Freshman)
+            .Count();
+
+
+            Console.WriteLine($"{freshmen} freshmen are in the database.");
+            
+            
         }
+
     }
 }
