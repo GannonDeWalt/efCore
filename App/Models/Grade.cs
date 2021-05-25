@@ -5,5 +5,6 @@ namespace App
         public int StudentId { get; set; }
         public string CourseName { get; set; }
         public float GradeP { get; set; }
+        public Student student {get; set;}
     }
 }
