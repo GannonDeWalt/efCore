@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace App
 {
@@ -64,7 +65,12 @@ namespace App
 
             Console.WriteLine($"The max course count is {highCourseStudent.Count} from student {highCourseStudent.Name}");
 
+            Console.WriteLine("\nDisplaying a student that is not in a class");
 
+            var studentNOClass = db.Students
+            .Include(student => student.grades).Where<Student>(s => s.grades.Count() == 0).FirstOrDefault();
+            Console.WriteLine($"{studentNOClass.FirstName} {studentNOClass.LastName} didn't register for a class uwu kinda sus.");
+            //.Where<Student>(s => s.grades == null).FirstOrDefault();
         }
     }
 }
