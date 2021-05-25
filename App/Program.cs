@@ -34,48 +34,29 @@ namespace App
             //4
             Console.WriteLine("Querying for student with highest average grade");
 
-            /*
             var studentAllGrades = db.Grades
-                .GroupBy(i => i.StudentId)
-                .Select(g => new {
-                    StudentId = g.Key, 
-                    Average = g.Average(a => a.CourseGrade),
-                    Count = g.Count()})
-                .Join(
-                    db.Students,
-                    g => g.StudentId,
-                    student => student.Id,
-                    (g, student) => new {
-                        Id = student.Id,
-                        Name = student.FirstName + " " + student.LastName,
-                        Year = student.Classification,
-                        AvgGrade = g.Average,
-                        CourseCount = g.Count
-                    });
-                var highAvgStudent = studentAllGrades.OrderByDescending(o => o.AvgGrade).FirstOrDefault();
-
-            */
-
-            var grades4 = db.Grades
             .GroupBy(g => g.StudentId)
             .Select(g => new {
                 StudentId = g.Key, 
                 Average = g.Average(a => a.GradeP),
                 Count = g.Count()
-                });
-            
+                })
+            .Join(
+                db.Students,
+                g => g.StudentId,
+                s => s.Id,
+                (grade, student) => new {
+                    Id = student.Id,
+                    Name = student.FirstName + " " + student.LastName,
+                    Year = student.classification,
+                    Avg = grade.Average,
+                    Count = grade.Count,
+                }
+            );
 
-            // var grades4 = from grades in db.Grades
-            // group grades by grades.StudentId into studentGroup
-            // select new 
-            // {
-            //     Student = studentGroup.Key,
-            //     Average = studentGroup.Average(x => x.GradeP)
-            // };
+            var highAvgStudent = studentAllGrades.OrderByDescending(o => o.Avg).FirstOrDefault();
 
-            var maxAverage = grades4.ToList().Max(x => x.Average);
-
-            Console.WriteLine($"The max average is {maxAverage}");
+            Console.WriteLine($"The max average is {highAvgStudent.Avg} from student {highAvgStudent.Name}");
 
 
         }
